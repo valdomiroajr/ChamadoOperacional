@@ -1,0 +1,279 @@
+<style type="text/css">
+    #s4-workspace {
+        width: 100% !important;
+        height: auto !important;
+        padding-bottom: 5px !important;
+    }
+
+    #ms-designer-ribbon {
+        display: none !important;
+    }
+
+    .container {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+        max-width: inherit !important;
+    }
+
+    .user_logged {
+        display: block;
+        float: right;
+        margin-right: 10px;
+    };
+</style>
+
+
+<section class="section pd20">
+    <div class="columns">
+        <!-- <div class="column">
+           <div class="tile is-parent">
+                <article class="tile is-child notification is-success">
+                    <div class="content">
+
+
+
+
+                        <p class="title">Chamados</p>
+                        <p>
+                            <div class="content is-large">
+
+                            </div>
+                        </p>
+                        <p>
+                            <div class="content is-large">
+
+                            </div>
+                        </p>
+                    </div>
+                </article>
+            </div> -->
+
+
+        <!-- <div class="content">
+
+                </div>
+           
+        </div> -->
+        
+            
+        <div class="column">
+            <ul class="menu-list">
+                <br>
+                <br>
+                <li>
+                    <a class="is-active decorationNone bg br7 reportTableHeader cursorDefault font fs15"> <span
+                            class="icon-text">
+                            <span class="icon">
+                                <i class="fas fa-lg fa-clipboard-list is-large"></i>
+                            </span>
+                            <span>Chamados</span>
+                        </span></a>
+                    <ul>
+                        <li style="margin-bottom: 10px;">
+                            <a href="#" id="anchorNovoChamado" class="decorationNone button is-info white pointer">
+                                <span class="icon-text">
+                                    <span class="icon">
+                                        <i class="fas fa-lg fa-plus-circle is-large"></i>
+                                    </span>
+                                    <span>Novo Chamado</span>
+                                </span>
+                            </a></li>
+                        <li> <a href="#" id="anchorMeusChamados" class="decorationNone button is-info white pointer">
+                                <div class="content">
+                                    <span class="icon-text">
+                                        <span class="icon">
+                                            <i class="fas fa-search is-large"></i>
+                                        </span>
+                                        <span>Meus Chamados</span>
+                                    </span>
+                                </div>
+                            </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul class="menu-list">
+                <br>
+                <br>
+                <li>
+                    <a class="is-active decorationNone bg br7 reportTableHeader cursorDefault font fs15"> <span
+                            class="icon-text">
+                            <span class="icon">
+                                <i class="fas fa-lg fa-cog is-large"></i>
+                            </span>
+                            <span>Minhas Filas</span>
+                        </span></a>
+                    <ul>
+                        <li style="margin-bottom: 10px;">
+                            <a href="#" id="anchorRelatorioChamados"
+                                class="decorationNone button is-info white pointer">
+                                <span class="icon-text">
+                                    <span class="icon">
+                                        <i class="fas fa-search is-large"></i>
+                                    </span>
+                                    <span>Relatório de Chamados</span>
+                                </span>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="#" id="anchorRelatorioChamadosCoordenadores"
+                                class="decorationNone button is-info white pointer">
+                                <div class="content">
+                                    <span class="icon-text">
+                                        <span class="icon">
+                                            <i class="fas fa-search is-large"></i>
+                                        </span>
+                                        <span>Relatório de Coordenadores</span>
+                                    </span>
+                                </div>
+                            </a>
+                        </li> -->
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+        <div class="column" id="columnAdministracao">
+            <ul class="menu-list">
+                <li>
+                    <strong><p id="userLogged" onload="getUserLogged()" style="text-align: right;"></p></strong>
+                <li>
+                <br>
+                
+                <li>
+                    <a class="is-active decorationNone bg br7 reportTableHeader cursorDefault font fs15"> <span
+                            class="icon-text">
+                            <span class="icon">
+                                <i class="fas fa-lg fa-cog is-large"></i>
+                            </span>
+                            <span>Administração</span>
+                        </span></a>
+                    <ul>
+                        <li style="margin-bottom: 10px;"><a href="#" id="anchorGruposPermissoes"
+                                class="decorationNone button is-info white">
+                                <span class="icon-text">
+                                    <span class="icon">
+                                        <i class="fas  fa-users is-large"></i>
+                                    </span>
+                                    <span>Grupos e Permissões</span>
+                                </span>
+                            </a></li>
+                        <li>
+                            <a href="#" id="anchorCasasOracao" class="decorationNone button is-info white">
+                                <div class="content">
+                                    <span class="icon-text">
+                                        <span class="icon">
+                                            <i class="fas fa-place-of-worship is-large"></i>
+                                        </span>
+                                        <span>Casas de Oração</span>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="anchorGruposCO" class="decorationNone button is-info white">
+                                <div class="content">
+                                    <span class="icon-text">
+                                        <span class="icon">
+                                            <i class="fas  fa-object-group is-large"></i>
+                                        </span>
+                                        <span>Grupos de COs</span>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+<!-- 
+<section class="row pl15">
+
+    <div class="tile is-child notification is-warning">
+        <div class="fas fa-clipboard-list iconeGrande decorationNone" style="padding-left: 20px">
+        </div>
+        <div style="width: 50%; float:left;">
+
+            <div class="linkItem">
+                <a href="#" id="anchorNovoChamado" class="decorationNone fs16">
+                    <span href="#" class="fas fa-plus-circle mr5"></span><span href="#" class="decorationNone">Novo
+                        Chamado</span>
+                </a>
+            </div>
+            <div class="linkItem">
+                <a href="#" id="anchorMeusChamados" class="decorationNone fs16">
+                    <span href="#" class="fas fa-search mr5"></span><span href="#" class="decorationNone">Meus
+                        Chamados</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="blocoIconeGrande col-md-4" id="blocoConfiguracoes" style="display: none">
+        <div class="fas fa-cog iconeGrande decorationNone pl15">
+        </div>
+        <div style="width: 50%; float:left;">
+            <div class="linkItem">
+                <a href="#" id="anchorPainelAdmin" class="decorationNone fs16">
+                    <span href="#" class="fas fa-cog mr5"></span><span href="#" class="decorationNone">Painel
+                        Administrativo</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="blocoIconeGrande col-md-4" id="blocoRelatorios" style="display: none">
+        <div class="fas fa-receipt iconeGrande decorationNone pl21">
+        </div>
+        <div style="width: 50%; float:left;">
+            <div class="linkItem">
+                <a href="#" id="anchorRelatorioPedidos" class="decorationNone fs16">
+                    <span href="#" class="fas fa-search mr5"></span><span href="#" class="decorationNone">Relatório de
+                        Pedidos (COs)</span>
+                </a>
+            </div>
+            <div class="linkItem">
+                <a href="#" id="anchorRelatorioPedidosPorFornecedor" class="decorationNone fs16">
+                    <span href="#" class="fas fa-search mr5"></span><span href="#" class="decorationNone">Relatório de
+                        Pedidos (Fornecedores)</span>
+                </a>
+            </div>
+            <div class="linkItem">
+                <a href="#" id="anchorItensPorFornecedor" class="decorationNone fs16">
+                    <span href="#" class="fas fa-plus-circle mr5"></span><span href="#" class="decorationNone">Imprimir
+                        Pedido Fornecedor</span>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="blocoIconeGrande col-md-4" id="blocoDeclaracaoTransito" style="display: none">
+        <div class="fas fa-truck iconeGrande decorationNone pl10">
+        </div>
+        <div style="width: 50%; float:left;">
+            <div class="linkItem">
+                <a href="#" id="anchorNovaDeclaracaoTransito" class="decorationNone fs16">
+                    <span href="#" class="fas fa-plus-circle mr5"></span><span href="#" class="decorationNone">Nova
+                        Declaração de Trânsito</span>
+                </a>
+            </div>
+            <div class="linkItem">
+                <a href="#" id="anchorRelatorioDeclaracoes" class="decorationNone fs16">
+                    <span href="#" class="fas fa-search mr5"></span><span href="#" class="decorationNone">Relatório de
+                        Declarações</span>
+                </a>
+            </div>
+            <div class="linkItem">
+                <a href="#" id="anchorRelatorioItensPendentes" class="decorationNone fs16">
+                    <span href="#" class="fas fa-search mr5"></span><span href="#" class="decorationNone">Relatório de
+                        Itens Pendentes</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+ -->

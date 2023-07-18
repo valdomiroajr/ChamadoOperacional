@@ -1,0 +1,125 @@
+<style type="text/css">
+    #s4-workspace {
+        width: 100% !important;
+        height: auto !important;
+        padding-bottom: 5px !important;
+    }
+
+    #ms-designer-ribbon {
+        display: none !important;
+    }
+
+    .container {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+        max-width: inherit !important;
+    }
+</style>
+
+<div>
+    <br>
+    <strong><p id="userLogged" onload="getUserLogged()" style="text-align: right;"></p></strong>
+    <br>
+</div>
+
+<section class="mt20 mb20">
+    <h1 class="title">Relatório de Chamados</h1>
+</section>
+<section class="pb25">
+    <div class="columns">
+    <div class="column">
+        <div class="field">
+            <label class="label">Casa de Oração</label>
+            <div class="control has-icons-left">
+                <div class="select">
+                    <select id="ddlCasaOracao" class="wd260">
+                        <option value="">Selecione...</option>
+                    </select>
+                </div>
+                <div class="icon is-small is-left">
+                    <i class="fas fa-place-of-worship"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="field">
+            <label class="label">Grupo</label>
+            <div class="control has-icons-left">
+                <div class="select">
+                    <select id="ddlGrupo" class="wd260">
+                        <option value="">Selecione...</option>
+                    </select>
+                </div>
+                <div class="icon is-small is-left">
+                    <i class="fas fa-place-of-worship"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="field">
+            <label class="label">Status</label>
+            <div class="control has-icons-left">
+                <div class="select">
+                    <select id="ddlStatus" class="wd260">
+                        <option value="">Selecione...</option>
+                        <option value="Aguardando Análise Coordenador">Aguardando Análise Coordenador</option>
+                        <option value="Encaminhado para Informática">Encaminhado para Informática</option>
+                        <option value="Em validação - Casa de Oração">Em validação - Casa de Oração</option>
+                        <option value="Aprovado para Execução - Casa de Oração">Aprovado para Execução - Casa de Oração</option>
+                        <option value="Encaminhado para Gestão">Encaminhado para Gestão</option>
+                        <option value="Encaminhado para Segurança">Encaminhado para Segurança</option>   
+                        <option value="Encaminhado para Civil">Encaminhado para Civil</option>
+                        <option value="Encaminhado para Mecânica">Encaminhado para Mecânica</option>
+                        <option value="Encaminhado para Compras">Encaminhado para Compras</option>
+                        <option value="Encaminhado para Elétrica">Encaminhado para Elétrica</option>
+                        <option value="Encaminhado para Elétrica - Alarme/Luz/Som">Encaminhado para Elétrica - Alarme/Luz/Som</option>
+                        <option value="Inviável Tecnicamente">Inviável Tecnicamente</option>   
+                        <option value="Chamado Concluído">Chamado Concluído</option>   
+                    </select>
+                </div>
+                <div class="icon is-small is-left">
+                    <i class="fas fa-place-of-worship"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+    <div class="column">
+        <div class="field">
+            <label class="label">Atribuído a</label>
+            <div class="control has-icons-left">
+                <div class="select">
+                    <select id="ddlAssignedTo" class="wd260">
+                        <option value="">Selecione...</option>
+                        <option value="Casa de Oração">Casa de Oração</option>   
+                        <option value="Gestores Chamados">Gestores Chamados</option>   
+                        <option value="Elétrica">Elétrica</option>  
+                        <option value="Civíl">Civil</option>  
+                        <option value="Segurança">Segurança</option>   
+                    </select>
+                </div>
+                <div class="icon is-small is-left">
+                    <i class="fas fa-place-of-worship"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    -->
+    <div class="column">
+        <div class="control mt18">
+            <input id="btnSearch" type="button" class="button is-link is-medium" value="Buscar"></input>
+        </div>
+    </div>
+    <div class="column">
+        <div class="control mt18">
+            <input id="btnExport" type="button" class="button is-link is-medium" value="Exportar"></input>
+        </div>
+    </div>
+</div>
+</section>
+<section class="row campo" id="relatorioChamados">
+
+</section>

@@ -1,0 +1,536 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/* * {
+    font-family: 'Open Sans', sans-serif !important;
+} */
+
+
+
+
+
+
+/* TABLE ANEXOS  */
+#tblAnexos {
+    background-color: lightgray;
+}
+
+
+
+
+
+
+
+
+@media print {
+
+    .noprint,
+    .noprint * {
+        display: none !important;
+    }
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+a:visited {
+    color: #0072c6 !important;
+}
+
+
+.iconeCasinha,
+.iconeVoltar {
+    float: left;
+    margin-left: 15px;
+    margin-top: 2px;
+    border: solid 1px white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.fleft {
+    float: left !important;
+}
+
+.hidden {
+    display: none !important;
+    ;
+}
+
+.block {
+    display: block !important;
+}
+
+.visible {
+    display: block !important;
+}
+
+.tituloSecao {
+    font-size: 24px;
+    color: dodgerblue !important;
+}
+
+.nomeCampo {
+    /* width: 110px; */
+    color: dodgerblue;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+body {
+    overflow: auto !important;
+}
+
+#sideNavBox,
+#s4-titlerow {
+    display: none !important;
+}
+
+#contentBox {
+    margin-left: 165px !important;
+    padding-top: 10px !important;
+}
+
+
+.midHeader {
+    background-color: dodgerblue;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+
+
+.ml0 {
+    margin-left: 0px !important;
+}
+
+
+.ml10 {
+    margin-left: 10px !important;
+}
+
+
+.ml40pct {
+    margin-left: 40% !important;
+}
+
+.ml45pct {
+    margin-left: 45% !important;
+}
+
+
+.borderSimple {
+
+    border: 1px solid black;
+}
+
+
+.HeaderTitle {
+    z-index: 10;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    background-color: dodgerblue;
+    height: 55px;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 5px;
+    justify-content: center;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    float: left;
+    /* margin-left: 10%; */
+}
+
+.offBG {
+    z-index: 3;
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    opacity: 1;
+    margin-left: 10%;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+
+.iconeGrande {
+    font-size: 55px;
+    float: left;
+    border-color: dodgerblue;
+    color: dodgerblue;
+    border-style: outset;
+    padding: 10px;
+    border-radius: 12px;
+    margin-right: 10px;
+    height: 80px;
+    width: 90px;
+}
+
+.decorationNone,
+.decorationNone:visited,
+.decorationNone:hover {
+    text-decoration: none !important;
+    color: dodgerblue;
+}
+
+.mr5 {
+    margin-right: 5px !Important;
+}
+
+.mr10 {
+    margin-right: 10px !Important;
+}
+
+.fs16 {
+    font-size: 16px;
+}
+
+.linkItem {
+    float: left;
+    width: 300px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 5px;
+}
+
+.blocoIconeGrande {
+    height: 100px;
+    float: left;
+}
+
+.pl15 {
+    padding-left: 15px !Important;
+}
+
+.pl21 {
+    padding-left: 21px !Important;
+}
+
+.pb5 {
+    padding-bottom: 5px;
+}
+
+.pb10 {
+    padding-bottom: 10px;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+
+section.row {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.container {
+    background-color: white;
+    min-height: 50vw;
+    height: auto;
+    max-width: 100% !important;
+    /* overflow-x: auto; */
+    overflow-x: hidden;
+    padding-left: 20px !Important;
+}
+
+/* #s4-bodyContainer {
+    background-color: #f3f3f3;
+    float: none !important;
+    margin-top: 10px;
+    display: block;
+    margin-left: 160px;
+} */
+.campo {
+    width: auto;
+    float: left;
+    margin-right: 15px;
+}
+
+section.row.campo {
+    padding-top: 5px !important;
+    margin-left: 5px;
+}
+
+section.row.campo div {
+    float: left;
+}
+
+/* section.row.campo div label {
+    float: left;
+    margin-left: 5px;
+} */
+
+input[type='file'] {
+    height: 30px !important;
+    border: none !important;
+}
+
+section.row.campo div input,
+section.row.campo div select option,
+section.row.campo div select {
+    border-radius: 4px;
+    padding-left: 5px;
+    height: 24px;
+}
+
+section.row.campo div span {
+    display: block !important;
+}
+
+section.row.campo div input[type='button'] {
+    background-color: dodgerblue;
+    color: white;
+    text-align: center;
+    padding-bottom: 0px;
+    height: 28px;
+    vertical-align: middle;
+    padding-top: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+    min-width: 90px;
+}
+
+.pt5 {
+    padding-top: 5px !important;
+}
+
+.mt-15 {
+    margin-top: -15px !important;
+}
+
+.mt-20 {
+    margin-top: -20px !important;
+}
+
+.mb30 {
+    margin-bottom: 30px !important;
+}
+
+.mb5 {
+    margin-bottom: 5px !important;
+}
+
+.mt10 {
+    margin-top: 10px !important;
+}
+
+.mt15 {
+    margin-top: 15px !important;
+}
+
+.mt20 {
+    margin-top: 20px !important;
+}
+
+.mt17 {
+    margin-top: 17px !important;
+}
+
+
+.mt30 {
+    margin-top: 30px !important;
+}
+
+.vermelho {
+    color: red !important;
+}
+
+.bordaIconeVermelha {
+    height: 25px;
+    width: 25px;
+    font-size: 20px;
+    border: 1px solid red;
+    text-align: center;
+    padding-top: 1px;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.bordaIconeAzul {
+    height: 25px;
+    width: 25px;
+    font-size: 20px;
+    border: 1px solid dodgerblue;
+    text-align: center;
+    padding-top: 1px;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center !important;
+}
+
+.left {
+    text-align: left !important;
+}
+
+.wd100 {
+    width: 100px !important;
+}
+
+.wd35 {
+    width: 35px !important;
+}
+
+.wd120 {
+    width: 120px !important;
+}
+
+
+.wd125 {
+    width: 125px !important;
+}
+
+.wd135 {
+    width: 135px !important;
+}
+
+.wd165 {
+    width: 165px !important;
+}
+
+.wd200 {
+    width: 200px !important;
+}
+
+.wd45pct {
+    width: 45% !important;
+}
+
+.wd48pct {
+    width: 48% !important;
+}
+
+.wd50pct {
+    width: 50% !important;
+}
+
+.wd100pct {
+    width: 100% !important;
+}
+
+.bold {
+    font-weight: bold !important;
+}
+
+.titleIcon {
+    font-size: 19px;
+    padding-top: 5px;
+    margin-right: 5px;
+    float: left;
+}
+
+.azul {
+    color: dodgerblue !important;
+}
+
+.azulEscuro {
+    color: #004d85 !important;
+}
+
+.bd-top {
+    border-top: solid 1px #004d85;
+}
+
+.bd-bottom {
+    border-bottom: solid 1px #004d85;
+}
+
+.contents {
+    display: contents !important;
+}
+
+.iconeBlocoMedio {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* border: solid thin; */
+    /* display: block; */
+    border: dodgerblue thin solid;
+    border-radius: 7px;
+    width: 35px;
+    height: 35px;
+    /* vertical-align: middle !important; */
+    padding-top: 7px;
+    margin-left: 5px;
+}
+
+#bernalLeftMenu {
+    width: 150px;
+    height: 100%;
+    background-color: #0655f5;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+    min-height: 800px;
+}
+
+.ms-siteicon-img {
+    display: block;
+    max-width: 180px;
+    /* max-height: 64px; */
+    width: 95px !important;
+    height: 64px !important;
+    margin-left: 28px;
+    margin-top: 20px;
+}
+
+.iconLeftMenu {
+    color: white !important;
+    font-size: 25px;
+    background-color: #007BFF !important;
+    border-radius: 4px;
+    height: 50px;
+    width: 140px;
+    padding-top: 12px;
+    padding-left: 5px;
+    display: block !important;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+#contentRow {
+    padding-top: 0px !important;
+}
+
+.textLeftMenu {
+    font-size: 15px !important;
+    /* margin-left: 23px; */
+    /* float: left; */
+    /* margin-right: 10px; */
+    margin-top: -17px;
+    margin-left: 35px;
+    font-family: initial;
+    /* margin-left: 44px; */
+    /* position: relative; 
+    /* display: table-cell;*/
+}
+
+.justifyCenter {
+    justify-content: center;
+}
+
+
+.white {
+    color: white !Important;
+}
+
+.bgDodger {
+    background-color: dodgerblue !important;
+}

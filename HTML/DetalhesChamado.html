@@ -1,0 +1,333 @@
+<style type="text/css">
+   #s4-workspace {
+   overflow: auto !important;
+   height: auto !important;
+   }
+   #ms-designer-ribbon {
+   display: none !important;
+   }
+   #discAttachmentLink3,
+   #discAttachmentLink1 {
+   display: none;
+   }
+</style>
+<div class="column">
+   <table class="table is-striped is-hoverable mt20">
+      <thead>
+         <tr class="bg">
+            <th colspan="4" class="br7 reportTableHeader">
+               Detalhes do Chamado
+            </th>
+         </tr>
+      </thead>
+      <tr>
+         <td colspan="2" class="detalhesFieldLabel">Chamado:</td>
+         <td colspan="2"> <label class="" id="lblChamado"></label></td>
+      </tr>
+      <tr>
+         <td colspan="2" class="detalhesFieldLabel">Solicitante:</td>
+         <td colspan="2"> <label class="" id="lblSolicitante"></label></td>
+      </tr>
+      <tr>
+         <td colspan="2" class="detalhesFieldLabel">Status Atual:</td>
+         <td colspan="2"> <label id="lblStatus" class=""></label></td>
+      </tr>
+      <tr>
+         <td colspan="2" class="detalhesFieldLabel">Casa de Oração:</td>
+         <td colspan="2"> <label class="" id="lblCasaOracao"></label></td>
+      </tr>
+      <tr>
+         <td colspan="2" class="detalhesFieldLabel">Categoria:</td>
+         <td colspan="2"> <label class="" id="lblCategoria"></label></td>
+      </tr>
+      <tr>
+         <td colspan="2" class="detalhesFieldLabel">Responsável Atual:</td>
+         <td colspan="2"> <label class="" id="lblResponsavel"></label></td>
+      </tr>
+      <td id="tdAprovarExecucaoCO" class="hidden" style="padding">
+         <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer "
+            value="Aprovar Execução CO" onclick="javascript:Flat.ApproveForExecution();" />
+      </td>
+      <td id="tdInviavelTecnicamenteCO" class="hidden">
+         <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+            value="Inviável Tecnicamente" onclick="javascript:Flat.InviavelTecnicamente('CO')" />
+      </td>
+      <td id="tdEnviarInformatica" class="hidden">
+         <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+            value="Enviar - Informática" onclick="javascript:Flat.ForwardToInformatica()" />
+      </td>
+      <!--
+      <td id="tdEnviarPorInformaticaParaCO" class="hidden">
+         <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+            value="Enviar - Casa de Oração" onclick="javascript:Flat.ForwardFromInformaticaToCo()" />
+      </td>-->
+      
+      <td id="tdInviavelTecnicamente" class="hidden">
+         <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+            value="Inviável Tecnicamente" onclick="javascript:Flat.InviavelTecnicamente('Coordenacao')" />
+      </td>
+      <td id="tdEnviarEletrica" class="hidden">
+         <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+            value="Enviar - Elétrica" onclick="javascript:Flat.ForwardToEngenharia('Elétrica');" />
+      </td>
+      <td id="tdEnviarGestao" class="hidden">
+         <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+            value="Enviar - Gestão" onclick="javascript:Flat.ForwardToTicketManagement();" />
+      </td>
+      <td id="tdEnviarCivil" class="hidden">
+         <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+            value="Enviar - Civil" onclick="javascript:Flat.ForwardToEngenharia('Civil');" />
+      </td>
+      <td id="tdEnviarMecanica" class="hidden">
+         <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+            value="Enviar - Mecânica" onclick="javascript:Flat.ForwardToEngenharia('Mecânica');" />
+      </td>
+      <td id="tdEnviarSeguranca" class="hidden">
+         <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+            value="Enviar - Segurança" onclick="javascript:Flat.ForwardToEngenharia('Segurança');" />
+      </td>
+      <td id="tdConcluirChamado" class="hidden">
+         <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+            value="Concluir Chamado" onclick="javascript:Flat.FinishTicket()" />
+      </td>
+      <td id="tdEnviarCoordenacao" class="hidden">
+         <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+            value="Enviar Coordenação" onclick="javascript:Flat.ForwardToCoordenador()" />
+      </td>
+      <td id="tdEnviarEletricaEmergencia" class="hidden">
+         <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer "
+            value="Elétrica - Alarme/Luz/Som (Emergência)" onclick="javascript:Flat.ForwardToEngenharia('Elétrica - Alarme/Luz/Som (Emergência)');" />
+      </td>
+      <td id="tdEnviarCompras" class="hidden">
+            <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                value="Enviar Compras" onclick="javascript:Flat.ForwardToCompras()" />
+        </td>
+        <!-- Começa aqui-->
+        <tr id="showBotoesBloco1" class="hidden">
+            <td>
+                <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                    value="Enviar - Civil" onclick="javascript:Flat.ForwardToEngenharia('Civil');" />
+            </td>
+            <td style="padding">
+            <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer "
+                value="Aprovar Execução CO" onclick="javascript:Flat.ApproveForExecution();" />
+            </td>
+           <td>
+                <input id="enviavelTecnicamenteCO" type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                    value="Inviavel Técnicamente" onclick="javascript:Flat.InviavelTecnicamente('CO')" />
+            </td>
+            <td>
+                <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                    value="Enviar - Informática" onclick="javascript:Flat.ForwardToInformatica()" />
+            </td>
+            <td>
+                <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                    value="Enviar - Casa de Oração" onclick="javascript:Flat.ForwardFromInformaticaToCo()" />
+            </td>
+        </tr>
+        <tr id="showBotoesBloco2" class="hidden">
+            <!--<td>
+                <input id="enviavelTecnicamenteCoordenacao" type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                    value="Inviável Tecnicamente" onclick="javascript:Flat.InviavelTecnicamente('Coordenacao')" />
+            </td>-->
+            <td>
+                <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                    value="Enviar - Elétrica" onclick="javascript:Flat.ForwardToEngenharia('Elétrica');" />
+            </td>
+            <td>
+                <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                    value="Enviar - Gestão" onclick="javascript:Flat.ForwardToTicketManagement();" />
+            </td>
+            <td>
+                <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                    value="Enviar - Mecânica" onclick="javascript:Flat.ForwardToEngenharia('Mecânica');" />
+            </td>
+            <td>
+                <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                    value="Enviar - Segurança" onclick="javascript:Flat.ForwardToEngenharia('Segurança');" />
+            </td>
+        </tr>
+        <tr id="showBotoesBloco3" class="hidden">
+            <td>
+                <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                    value="Concluir Chamado" onclick="javascript:Flat.FinishTicket()" />
+            </td>
+            <td>
+                <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                    value="Enviar Coordenação" onclick="javascript:Flat.ForwardToCoordenador()" />
+            </td>
+            <td>
+                <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer "
+                    value="Elétrica - Alarme/Luz/Som (Emergência)" onclick="javascript:Flat.ForwardToEngenharia('Elétrica - Alarme/Luz/Som (Emergência)');" />
+            </td>
+            <td>
+                <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                    value="Enviar Compras" onclick="javascript:Flat.ForwardToCompras()" />
+            </td>
+        <tr>
+   </table>
+</div>
+<div class="column">
+   <table class="table is-striped is-hoverable mt20" id="tblAnexos" style="min-width: 400px;">
+      <thead>
+         <tr class="bg">
+            <th colspan="2" class="br7 reportTableHeader">
+               Anexos
+            </th>
+         </tr>
+      </thead>
+      <tbody id="attachmentsTbody"></tbody>
+   </table>
+   <div class="file hidden" id="divAddAttachments">
+      <label class="file-label">
+      <input type="file" class="file-input" id="fupAnexos" multiple="true" />
+      <span class="file-cta">
+      <span class="file-icon">
+      <i class="fas fa-upload"></i>
+      </span>
+      <span id="spanSelectedFile" class="file-label">
+      Selecione...
+      </span>
+      </label>
+      <div><input type="button" id="btnEnviarAnexo" value="Enviar Anexo" class=" is-link is-rounded bg br7 colorWhite bold pointer"/></div>
+   </div>
+</div>
+</div>
+<!-- <style type="text/css">
+   #s4-workspace {
+       overflow: auto !important;
+       height: auto !important;
+   }
+   
+   #ms-designer-ribbon {
+       display: none !important;
+   }
+   
+   #discAttachmentLink3,
+   #discAttachmentLink1 {
+       display: none;
+   }
+   </style>
+   
+   <div class="container">
+   <div class="columns">
+       <div class="column">
+           <table class="table is-striped is-hoverable mt20" style="min-width: 400px;">
+               <thead>
+                   <tr class="bg">
+                       <th colspan="4" class="br7 reportTableHeader">
+                           Detalhes do Chamado
+                       </th>
+                   </tr>
+               </thead>
+               <tr>
+                   <td colspan="2" class="detalhesFieldLabel">Chamado:</td>
+                   <td colspan="2"> <label class="" id="lblChamado"></label></td>
+               </tr>
+                <tr>
+                   <td colspan="2" class="detalhesFieldLabel">Solicitante:</td>
+                   <td colspan="2"> <label class="" id="lblSolicitante"></label></td>
+               </tr>
+               <tr>
+                   <td colspan="2" class="detalhesFieldLabel">Status Atual:</td>
+                   <td colspan="2"> <label id="lblStatus" class=""></label></td>
+               </tr>
+               <tr>
+                   <td colspan="2" class="detalhesFieldLabel">Casa de Oração:</td>
+                   <td colspan="2"> <label class="" id="lblCasaOracao"></label></td>
+               </tr>
+               <tr>
+                   <td colspan="2" class="detalhesFieldLabel">Categoria:</td>
+                   <td colspan="2"> <label class="" id="lblCategoria"></label></td>
+               </tr>
+               <tr>
+                   <td colspan="2" class="detalhesFieldLabel">Responsável Atual:</td>
+                   <td colspan="2"> <label class="" id="lblResponsavel"></label></td>
+               </tr>
+               <tr>
+                   <td id="tdAprovarExecucaoCO" class="hidden">
+                       <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer "
+                           value="Aprovar Execução CO" onclick="javascript:Flat.ApproveForExecution();" />
+                   </td>
+                   <td id="tdInviavelTecnicamenteCO" class="hidden">
+                       <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                           value="Enviar - Casa de Oração" onclick="javascript:Flat.InviavelTecnicamente('CO')" />
+                   </td>
+                   <td id="tdEnviarInformatica" class="hidden">
+                       <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                           value="Enviar - Informática" onclick="javascript:Flat.ForwardToInformatica()" />
+                   </td>
+                    <td id="tdEnviarPorInformaticaParaCO" class="hidden">
+                       <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                           value="Enviar - Casa de Oração" onclick="javascript:Flat.ForwardFromInformaticaToCo()" />
+                   </td>
+                   <td id="tdInviavelTecnicamente" class="hidden">
+                       <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                           value="Inviável Tecnicamente" onclick="javascript:Flat.InviavelTecnicamente('Coordenacao')" />
+                   </td>
+                   <td id="tdEnviarEletrica" class="hidden">
+                       <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                           value="Enviar - Elétrica" onclick="javascript:Flat.ForwardToEngenharia('Elétrica');" />
+                   </td>
+                   <td id="tdEnviarGestao" class="hidden">
+                       <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                           value="Enviar - Gestão" onclick="javascript:Flat.ForwardToTicketManagement();" />
+                   </td>
+                   <td id="tdEnviarCivil" class="hidden">
+                       <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                           value="Enviar - Civil" onclick="javascript:Flat.ForwardToEngenharia('Civil');" />
+                   </td>
+                   <td id="tdEnviarSeguranca" class="hidden">
+                       <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                           value="Enviar - Segurança" onclick="javascript:Flat.ForwardToEngenharia('Segurança');" />
+                   </td>
+                   <td id="tdConcluirChamado" class="hidden">
+                       <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                           value="Concluir Chamado" onclick="javascript:Flat.FinishTicket()" />
+                   </td>
+                   <td id="tdEnviarCoordenacao" class="hidden">
+                       <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                           value="Enviar Coordenação" onclick="javascript:Flat.ForwardToCoordenador()" />
+                   </td>
+                   <td id="tdEnviarEletricaEmergencia" class="hidden">
+                       <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer "
+                           value="Elétrica - Alarme/Luz/Som (Emergência)" onclick="javascript:Flat.ForwardToEngenharia('Elétrica - Alarme/Luz/Som (Emergência)');" />
+                   </td>
+                   
+                   <td id="tdEnviarCompras" class="hidden">
+                       <input type="button" class=" is-link is-rounded bg br7 colorWhite bold pointer"
+                           value="Enviar Compras" onclick="javascript:Flat.ForwardToCompras()" />
+                   </td>
+               </tr>
+           </table>
+       </div>
+       <div class="column">
+           <table class="table is-striped is-hoverable mt20" id="tblAnexos" style="min-width: 400px;">
+               <thead>
+                   <tr class="bg">
+                       <th colspan="2" class="br7 reportTableHeader">
+                           Anexos
+                       </th>
+                   </tr>
+               </thead>
+               <tbody id="attachmentsTbody"></tbody>
+           </table>
+   
+           <div class="file hidden" id="divAddAttachments">
+               <label class="file-label">
+                   <input type="file" class="file-input" id="fupAnexos" multiple="true" />
+                   <span class="file-cta">
+                       <span class="file-icon">
+                           <i class="fas fa-upload"></i>
+                       </span>
+                       <span id="spanSelectedFile" class="file-label">
+                           Selecione...
+                       </span>
+               </label>
+               <div><input type="button" id="btnEnviarAnexo" value="Enviar Anexo" class=" is-link is-rounded bg br7 colorWhite bold pointer"/></div>
+           </div>
+   
+       </div>
+   </div>
+   
+   </div> -->

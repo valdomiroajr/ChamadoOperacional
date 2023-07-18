@@ -1,0 +1,207 @@
+/* BACKGROUND */
+.bg {
+    background-image: url('https://congregacao.sharepoint.com/sites/adm.sp.setorleonidasmoreira/Chamados_Operacional/Estilos/Images/HeaderBG.jpg') !important;
+}
+
+/* GENERAL SHAREPOINT FIXES */
+#s4-workspace {
+    width: 100% !important;
+
+}
+
+#aspnetForm {
+    height: auto !important;
+}
+
+html {
+    overflow: auto !important;
+}
+
+
+.button {
+    font-weight: bold !important;
+    padding-bottom: 25px !important;
+    margin-top: 10px !important;
+}
+
+
+/* ICONS */
+.iconBorder {
+    font-size: 20px;
+    border: solid thin;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+
+.hidden {
+    display: none !important;
+}
+
+.center {
+    text-align: center !important;
+}
+
+
+#loading {
+    width: 100%;
+    background-color: black;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+
+#spinnerIcon {
+    animation: spin-animation 1.5s infinite;
+    display: inline-block;
+    font-size: 40px;
+    color: black;
+    margin-top: 25%;
+}
+
+@keyframes spin-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+
+.decorationNone,
+.decorationNone:visited,
+.decorationNone:hover {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+
+
+/* MARGINS */
+
+.ml10 {
+    margin-left: 10px !important;
+}
+
+.ml20 {
+    margin-left: 20px !important;
+}
+
+.mr20 {
+    margin-right: 20px !important;
+}
+
+.mr15 {
+    margin-right: 15px !important;
+}
+
+
+.mt18 {
+    margin-top: 18px !important;
+}
+
+.mt20 {
+    margin-top: 20px !important;
+}
+
+.mb20 {
+    margin-bottom: 20px !important;
+}
+
+/* BORDERS  */
+.bdwhite1 {
+    border: white solid thin !important;
+}
+
+.bradius5 {
+    border-radius: 5px !important;
+}
+
+/* PADDINGS */
+
+.pd0 {
+    padding: 0px !important;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+
+.pb25 {
+    padding-bottom: 25px;
+}
+
+.pd5 {
+    padding: 5px !important;
+}
+
+.pd20 {
+    padding: 20px !Important;
+}
+
+/* WIDTHS */
+
+.wd350 {
+    width: 350px;
+}
+
+.wd260 {
+    width: 260px;
+}
+
+
+/* BORDERS */
+
+.bdtopleftradius {
+    border-top-left-radius: 15px;
+}
+
+.bdtoprightradius {
+    border-top-right-radius: 15px;
+}
+
+.br7 {
+    border-radius: 7px !important;
+}
+
+/* FONTS */
+
+.reportTableHeader {
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.colorWhite {
+    color: white !important;
+}
+
+.bold {
+    font-weight: bold !important;
+}
+
+.fs15 {
+    font-size: 15px !important;
+}
+
+.font {
+    font-family: "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif !important;
+}
+
+/* CURSOR */
+.cursorDefault {
+    cursor: default !important;
+}
+
+.pointer {
+    cursor: pointer !important;
+}

@@ -1,0 +1,133 @@
+<style type="text/css">
+    #s4-workspace {
+        overflow: revert !important;
+        width: 100% !important;
+    }
+
+    #ms-designer-ribbon {
+        display: none !important;
+    }
+
+    .container {
+        margin-left: 20px !important;
+        margin-right: 20px !important
+    }
+</style>
+
+<div>
+    <br>
+    <strong><p id="userLogged" onload="getUserLogged()" style="text-align: right;"></p></strong>
+    <br>
+</div>
+        
+<section class="mt20 mb20">
+    <h1 class="title">Novo Chamado</h1>
+    <h2 class="subtitle">
+        Preencha os dados abaixo para criar um novo chamado de Suporte Operacional
+    </h2>
+</section>
+<section>
+    <div class="columns">
+        <div class="column">
+            <div class="field">
+                <label class="label">Nome</label>
+                <div class="control has-icons-left">
+                    <input id="txtName" class="input" type="text" placeholder="Seu nome">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-signature"></i>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+        <div class="column">
+            <div class="field">
+                <label class="label">Email</label>
+                <div class="control has-icons-left">
+                    <input id="txtEmail" class="input wd350" type="text" placeholder="Email" value="">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <div class="column">
+            <div class="field">
+                <label class="label">Casa de Oração</label>
+                <div class="control has-icons-left">
+                    <div class="select">
+                        <select id="ddlCasaOracao" class="wd260">
+                            <option value="">Selecione...</option>
+                        </select>
+                    </div>
+                    <div class="icon is-small is-left">
+                        <i class="fas fa-place-of-worship"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="column">
+            <div class="field">
+                <label class="label">Categoria</label>
+                <div class="control has-icons-left">
+                    <div class="select">
+                        <select id="ddlCategory" class="wd260">
+                            <option value="">Selecione...</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section>
+    <div class="field">
+        <label class="label">Assunto</label>
+        <div class="control">
+            <input class="input" id="txtAssunto" type="text" placeholder="Text input">
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Descrição</label>
+        <div class="control">
+            <textarea id="txtDescription" class="textarea" placeholder="Textarea"></textarea>
+        </div>
+    </div>
+</section>
+<section>
+    <h3 class="subtitle">Anexos</h3>
+    <div class="file">
+        <label class="file-label">
+            <input type="file" class="file-input" id="fupAnexos" multiple="true" />
+            <span class="file-cta">
+                <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                </span>
+                <span id="spanSelectedFile" class="file-label">
+                    Selecione...
+                </span>
+        </label>
+    </div>
+</section>
+<section class="mb20">
+
+
+</section>
+<section>
+    <div class="field is-grouped mb20" style="float: right">
+        <div class="control">
+            <input id="btnSave" type="button" class="button is-link is-medium" value="Salvar"></input>
+        </div>
+        <div class="control">
+            <input id="btnCancel" type="button" class="button is-link is-light is-medium" value="Cancelar"></input>
+        </div>
+    </div>
+</section>
+
